@@ -112,6 +112,9 @@ if(isset($_REQUEST['sub']))
         <td class="info">
         <center>Stock Details</center>
         </td>
+        <td width="100">
+        <a href="stockpdf.php" class="print">Print</a>
+        </td>
         
         </tr>
         </table>
