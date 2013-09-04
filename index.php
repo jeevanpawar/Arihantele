@@ -27,7 +27,7 @@ error_reporting(0);
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title>Login</title>
+	<title>Arihant Electricals</title>
 	<link rel="stylesheet" href="logincss/reset.css">
 	<link rel="stylesheet" href="logincss/animate.css">
 	<link rel="stylesheet" href="logincss/styles.css">
