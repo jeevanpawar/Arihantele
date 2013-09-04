@@ -201,7 +201,7 @@ function getValues()
                 <table class="sale">
                 <tr>
                 <td>Date:</td>
-                <td><input type="text" name="t1" class="q_in" value="<?php echo date('d-m-Y'); ?>"></td>
+                <td><input type="date" name="t1" class="q_in" value="<?php echo date('d-m-Y'); ?>"></td>
                 <td>Bill Type:</td>
                 <td>           
                 <select name="t2" class="des_cap">
@@ -234,14 +234,14 @@ function getValues()
                 
                 <select name="pr[]" class="des_cap">
                 <?php
-				$pro="select * from product";
+				$pro="select * from stock_detail";
 				$res_pro=mysql_query($pro);
 			
 			    while($row_pr=mysql_fetch_array($res_pro))
 				{
 						
 					echo "<option>";
-					echo $row_pr[2];
+					echo $row_pr[0];
 					echo "</option>";
 				}
 				?>
