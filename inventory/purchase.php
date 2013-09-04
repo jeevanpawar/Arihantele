@@ -1,14 +1,11 @@
 <?php
 include("../session/session.php");
-
 include("../include/database.php");
 $per_page = 19;
-
 $sql = "select * from stock";
 $rsd = mysql_query($sql);
 $count = mysql_num_rows($rsd);
 $pages = ceil($count/$per_page);
-
 ?>
 <?php
 $qry_s="select * from stock";
@@ -19,30 +16,6 @@ $res_c=mysql_query($qry_c);
 
 $qry_sd="select * from stock_detail";
 $res_sd=mysql_query($qry_sd);
-
-?>
- <?php
-
-if(isset($_REQUEST['sub']))
-	{
-		$t1=date('Y-m-d', strtotime($_POST['tdate']));
-		$t2=$_POST['tnm'];
-		$qry_pr="insert into product(pname,date) values('".$t1."','".$t2."')";
-		$rs_pr=mysql_query($qry_pr);
-			
-	    if($rs_pr)
-		{
-			header("location:purchase.php");
-		}
-		else
-		{
-			echo "error";
-		}
-    }
-	if(isset($_REQUEST['can']))
-	{
-		header("location:purchase.php");
-	}
 
 ?>
 <?php
@@ -216,7 +189,7 @@ function getValues()
         <tr class="search_res">
         <td class="info">
         <span class="newbook"><a href="#" rel="popuprel" class="popup new">New Stock</a> </span>
-        <span class="newbook"><a href="#" rel="popuprel1" class="popup new">New Product</a> </span>
+        
         </td>
                 </tr>
         </table>
@@ -306,29 +279,7 @@ function getValues()
 				</form>
         </div>
 		</div>
-                <div class="popupbox_smallUP" id="popuprel1">
-		<div id="intabdiv">
-        <h2>New Product</h2><br/><br/>
-                
-                <form action="" method="post" name="po">
-                <table class="salePU">
-                <tr>
-                <td>Date:</td>
-                <td><input type="text" name="tdate" class="q_in" value="<?php echo date('d-m-Y'); ?>"></td>
-                <tr/>
-                <tr>
-                <td>Product Name:</td>
-                <td><input type="text" name="tnm" class="q_in"></td>
-                </tr>
-                </table>
-                <div class="i_buttonPU">
-       			<input type="submit" value="Submit" name="sub">
-        		<input type="submit" value="Cancel" name="can">
-       
-      			</div>
-				</form>
-        </div>
-		</div>
+               
 
        		<div id="loading" ></div>
 			<div id="content" ></div>
