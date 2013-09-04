@@ -1,0 +1,48 @@
+#facebox {
+  position: absolute;
+  margin-top:100px;
+  left: 0;
+  z-index: 100;
+  text-align: left;
+}
+.u
+{
+	margin-left:200px;
+}
+
+#facebox .popup{
+  position:relative;
+  margin-top:-10px;
+  background-color:#CCC;
+}
+
+#facebox .content {
+  display:table;
+  width: 350px;
+  padding: 10px;
+  background: #fff;
+}
+
+#facebox .content > p:first-child{
+  margin-top:0;
+}
+#facebox .content > p:last-child{
+  margin-bottom:0;
+}
+
+#facebox_overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+}
+
+.facebox_hide {
+  z-index:-100;
+}
+
+.facebox_overlayBG {
+  background-color: #000;
+  z-index: 99;
+}
